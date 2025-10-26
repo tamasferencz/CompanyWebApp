@@ -87,13 +87,13 @@ docker compose down -v
 npm run dev
 ```
 
-The server will start on `http://localhost:3000`
+The server will start on `http://localhost:3001`
 
 ### 📖 API Documentation
 
 Once the server is running, visit the interactive API documentation:
 
-**🔗 [http://localhost:3000/api-docs](http://localhost:3000/api-docs)**
+**🔗 [http://localhost:3001/api-docs](http://localhost:3000/api-docs)**
 
 ## 🛠️ Tech Stack
 
