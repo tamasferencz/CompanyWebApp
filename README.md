@@ -10,6 +10,8 @@
 [![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white)](https://sequelize.org/)
 [![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://swagger.io/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+[![Testing](https://img.shields.io/badge/Tests-Passing-brightgreen?style=for-the-badge)]()
 
 ---
 
@@ -20,6 +22,7 @@
 - 🏢 **Company Management** - Create, read, update, and delete companies
 - 📍 **Address Management** - Manage company addresses with full CRUD operations
 - 📚 **API Documentation** - Interactive Swagger UI documentation
+- 🧪 **Automated Testing** - Comprehensive test suite with Jest & Supertest
 - 🐳 **Docker Support** - Easy containerized deployment
 - 🔗 **RESTful API** - Clean and intuitive API endpoints
 - 📊 **Database Relations** - Companies with multiple addresses support
@@ -119,6 +122,84 @@ Once the server is running, visit the interactive API documentation:
 - `GET /api/companies/{id}/addresses` - Get company addresses
 - `PUT /api/companies/{id}/addresses/{addressId}` - Update address
 - `DELETE /api/companies/{id}/addresses/{addressId}` - Delete address
+
+## 🧪 Testing
+
+This project includes comprehensive automated testing using **Jest** and **Supertest**.
+
+### 🎯 Testing Stack
+
+| Technology    | Purpose            | Version  |
+| ------------- | ------------------ | -------- |
+| **Jest**      | Testing Framework  | ^29.x    |
+| **Supertest** | HTTP Testing       | ^6.x     |
+| **Mocking**   | Database Isolation | Built-in |
+
+### 🚀 Running Tests
+
+```bash
+# Run all tests once
+npm test
+
+# Run tests in watch mode (auto-rerun on changes)
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+### 📊 Test Coverage
+
+The test suite covers:
+
+- ✅ **Company API Endpoints**
+
+  - Create company (with/without address)
+  - Get all companies
+  - Get company by ID
+  - Update company
+  - Delete company
+  - Input validation
+  - Error handling (400, 404, 500)
+
+- ✅ **Address API Endpoints**
+  - Create company address
+  - Get company addresses
+  - Update address
+  - Delete address
+  - Validation and error scenarios
+
+### 📁 Test Structure
+
+```
+backend/tests/
+├── company.test.js        # Company endpoint tests
+├── companyAddress.test.js # Address endpoint tests
+├── setup.js              # Global test configuration
+└── jest.config.js         # Jest configuration
+```
+
+### 📈 Example Test Output
+
+```bash
+PASS  tests/company.test.js
+PASS  tests/companyAddress.test.js
+
+Test Suites: 2 passed, 2 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        2.847 s
+Coverage:    95.24% of statements
+```
+
+### 🔧 Test Features
+
+- **🚀 Fast Execution** - Mocked database for speed
+- **🔍 Comprehensive Coverage** - Tests all endpoints and scenarios
+- **📝 Clear Documentation** - Tests serve as usage examples
+- **🛡️ Error Testing** - Validates error handling
+- **📊 Coverage Reports** - HTML reports in `/coverage` folder
+- **🔄 Watch Mode** - Auto-rerun tests during development
 
 ## 📚 Documentation & Resources
 

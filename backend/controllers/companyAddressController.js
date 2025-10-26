@@ -48,7 +48,7 @@ const createCompanyAddresses = async (req, res) => {
         });
         res.status(201).json(newAddress);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to create company address: ' + error.message });
+        res.status(400).json({ error: 'Failed to create company address: ' + error.message });
     }
 };
 
@@ -98,7 +98,7 @@ const getCompanyAddresses = async (req, res) => {
             res.status(404).json({ error: 'Company not found' });
         }
     } catch (error) {
-        res.status(500).json({ error: 'Failed to retrieve company' });
+        res.status(400).json({ error: 'Failed to retrieve company addresses: ' + error.message });
     }
 };
 
@@ -162,7 +162,7 @@ const updateCompanyAddress = async (req, res) => {
             res.status(404).json({ error: 'Company address not found' });
         }
     } catch (error) {
-        res.status(500).json({ error: 'Failed to update company address' });
+        res.status(400).json({ error: 'Failed to update company address: ' + error.message });
     }
 };
 
@@ -211,7 +211,7 @@ const deleteCompanyAddress = async (req, res) => {
             res.status(404).json({ error: 'Company address not found' });
         }
     } catch (error) {
-        res.status(500).json({ error: 'Failed to delete company address' });
+        res.status(400).json({ error: 'Failed to delete company address: ' + error.message });
     }
 };
 

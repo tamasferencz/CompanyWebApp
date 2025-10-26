@@ -55,6 +55,11 @@ const companyRouter = require('./routes/companyRouter');
 app.use('/api', companyRouter);
 
 //Port;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+// Export app for testing
+module.exports = app;
