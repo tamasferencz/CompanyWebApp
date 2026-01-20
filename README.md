@@ -153,7 +153,6 @@ npm run test:coverage
 The test suite covers:
 
 - ✅ **Company API Endpoints**
-
   - Create company (with/without address)
   - Get all companies
   - Get company by ID
@@ -228,4 +227,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ⭐ Star this repo if you found it helpful!
 
 </div>
-
